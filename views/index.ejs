@@ -11,7 +11,7 @@
     <div class="container mt-5">
         <h1 class="text-center">Find Your Mentor</h1>
 
-        <!-- Category Filter -->
+     
         <div class="mb-4">
             <label for="category">Select Category:</label>
             <select id="category" class="form-control" onchange="filterMentors()">
@@ -23,7 +23,7 @@
             </select>
         </div>
 
-        <!-- Mentor Cards -->
+       
         <div class="row" id="mentorCards">
             <% mentors.forEach(mentor => { %>
             <div class="col-md-6 mb-3 mentor-card" data-categories="<%= mentor.categories.join(' ') %>">
