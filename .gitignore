@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= mentor.name %>'s Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="/images/mentor-photo-placeholder.png" class="img-fluid rounded-circle mb-3" alt="<%= mentor.name %>">
+                <h2><%= mentor.name %></h2>
+                <p class="text-muted">Followers: 1.62K | Following: 549</p>
+                <button class="btn btn-primary mb-3">Follow</button>
+            </div>
+            <div class="col-md-8">
+                <h3>Description</h3>
+                <p><%= mentor.description %></p>
+
+                <h3>Affiliated Organization</h3>
+                <p><%= mentor.organization %></p>
+
+                <h3>Credentials</h3>
+                <p><%= mentor.credentials.join(', ') %></p>
+
+                <h3>Price</h3>
+                <p><%= mentor.price %></p>
+
+                <h3>LinkedIn</h3>
+                <p><a href="<%= mentor.linkedin %>" target="_blank"><%= mentor.linkedin %></a></p>
+
+                <div class="mt-4">
+                    <a href="/" class="btn btn-secondary">Back to Find Your Mentor</a>
+                    <a href="#" class="btn btn-success">See Plans</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card detail-card shadow-lg">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="<%= mentor.image %>" class="card-img img-fluid rounded" alt="<%= mentor.name %>">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= mentor.name %></h3>
+                        <p class="text-muted"><%= mentor.affiliation %></p>
+                        <p class="card-text"><%= mentor.description %></p>
+                        <hr>
+                        <p class="card-text">
+                            <strong>Credentials:</strong> <%= mentor.credentials %>
+                        </p>
+                        <p class="card-text">
+                            <strong>Categories:</strong> <%= mentor.categories.join(', ') %>
+                        </p>
+                        <p class="card-text">
+                            <strong>Price:</strong> $<%= mentor.price %>/hr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="<%= mentor.linkedin %>" class="btn btn-linkedin btn-lg mx-2" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <button class="btn btn-follow btn-lg mx-2">
+                <i class="fas fa-user-plus"></i> Follow
+            </button>
+            <button class="btn btn-contact btn-lg mx-2">
+                <i class="fas fa-envelope"></i> Contact
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+

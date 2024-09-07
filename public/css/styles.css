@@ -1,0 +1,272 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card-text {
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+.detail-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.detail-card .card-img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.detail-card .card-body {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.detail-card .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.detail-card .text-muted {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.detail-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+.detail-card hr {
+    border-top: 1px solid #e9ecef;
+    margin: 20px 0;
+}
+
+.detail-card .btn-lg {
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.detail-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.detail-card .btn-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.detail-card .btn-outline-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #ffffff;
+}
+.btn-linkedin {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-linkedin:hover {
+    background-color: #005582;
+    color: white;
+}
+
+.btn-follow {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-follow:hover {
+    background-color: #1e7d32;
+    color: white;
+}
+
+.btn-contact {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #117a8b;
+    color: white;
+}
+
+.btn-lg i {
+    margin-right: 8px;
+}
+.post-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-card .card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.post-card .card-text {
+    color: #555;
+}
+.mentor-profile img {
+    margin: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .mentor-profile h2 {
+    margin-top: 20px;
+  }
+  
+  .icons a {
+    margin-right: 10px;
+  }
+  
+  .posts-section .post {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+
+
+
+
+
+
+
+
+
+  /* Image Styling */
+.card-img {
+    margin: 10px;
+    border-right: 1px solid #ddd; /* Thin line to the right */
+}
+
+/* LinkedIn Button */
+.btn-linkedin {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-linkedin:hover {
+    background-color: #005582;
+    color: white;
+}
+
+/* Follow Button */
+.btn-follow {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-follow:hover {
+    background-color: #1e7d32;
+    color: white;
+}
+
+/* Contact Button */
+.btn-contact {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #117a8b;
+    color: white;
+}
+
+/* See Plans Button */
+.btn-plans {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-plans:hover {
+    background-color: #d39e00;
+    color: white;
+}
+
+/* General button icon spacing */
+.btn-lg i {
+    margin-right: 8px;
+}
+
+
+
+/* Add padding and curved edges to the image */
+.card-img {
+    /* padding: 15px; Adds space around the image */
+    border-radius: 10px; /* Rounds the image's corners */
+    /* margin:15px; */
+}
+
+/* Create the vertical line to the right of the image */
+.card-body {
+    border-left: 2px solid #ccc; /* Adds a thin vertical line */
+    padding-left: 20px; /* Adds space between the line and the description */
+}
+
+/* Ensure the image has an even margin from all sides */
+.detail-card .row.no-gutters {
+    margin: 10px; /* Adds margin to ensure the layout looks clean */
+}
+
+/* Optional: Make sure the image remains fluid */
+.card-img.img-fluid {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    height: auto; /* Keeps the image's aspect ratio */
+}
