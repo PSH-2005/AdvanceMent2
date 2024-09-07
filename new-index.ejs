@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Mentor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Find Your Mentor</h1>
+
+        <div class="mb-4">
+            <label for="category">Select Category:</label>
+            <select id="category" class="form-control" onchange="filterMentors()">
+                <option value="all">All</option>
+                <option value="Software">Software</option>
+                <option value="Management">Management</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AI">AI</option>
+            </select>
+        </div>
+
+        <div class="row" id="mentor-cards">
+            <% mentors.forEach(function(mentor) { %>
+            <div class="col-md-6 mb-4 mentor-card-container">
+                <div class="card mentor-card shadow-lg" data-categories="<%= mentor.categories.join(', ').toLowerCase() %>" onclick="window.location.href='/mentor/<%= mentor.id %>'">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="<%= mentor.image %>" class="card-img small-profile-img img-fluid rounded" alt="<%= mentor.name %>">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold"><%= mentor.name %></h5>
+                                <p class="text-muted"><%= mentor.organization %></p>
+                                <p class="card-text font-italic"><%= mentor.description.substring(0, 80) %>...</p>
+                                <p class="card-text"><strong>₹<%= mentor.price %>/hr</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function filterMentors() {
+            const category = document.getElementById('category').value.toLowerCase();
+            const cards = document.querySelectorAll('.mentor-card-container');
+
+            cards.forEach(card => {
+                const categories = card.querySelector('.mentor-card').getAttribute('data-categories');
+                if (category === 'all' || categories.includes(category)) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+<style>
+   
+.profile-pic {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.mentor-card {
+    margin-bottom: 20px; 
+    padding: 10px;
+}
+
+.mentor-card .card-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.mentor-card .card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.small-profile-img {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mentor-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+.mentor-card .card-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.mentor-card .card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.small-profile-img {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mentor-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.mentor-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mentor-card .card-body {
+    padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+    .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        max-width: 50%;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+</style>
